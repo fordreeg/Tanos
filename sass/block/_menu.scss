@@ -1,0 +1,81 @@
+.menu {
+    display: none;
+    padding-top: 150px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(59, 67, 76, .95);
+    text-align: center;
+    &.active {
+        display: block;
+    }
+    &__close {
+        position: absolute;
+        top: 5%;
+        right: 21%;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    &__lists {
+        list-style-type: none;
+    }
+    &__list {
+        margin-top: 15px;
+    }
+    &__link {
+        @include font ('Open Sans', 19, 600);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            color: $mcolor;
+        }
+    }
+    &__divider {
+        margin: 35px auto 35px;
+        width: 95px;
+        height: 2px;
+        background-color: $mcolor;
+    }
+    &-social {
+        margin: 0 auto;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        &__list {
+            margin: 0 7px 0 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            width: 33px;
+            height: 33px;
+            background-color: $fcolor;
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.2);
+            }
+            &_t {
+                background-color: $twcolor;
+            }
+            &_g {
+                background-color: $gcolor;
+            }
+            &_d {
+                background-color: $drcolor;
+            }
+            &_b {
+                background-color: $becolor;
+            }
+        }
+        &__link {
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+}

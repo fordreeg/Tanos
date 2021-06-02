@@ -1,0 +1,15 @@
+$mcolor: #f7600e;
+$tcolor: #3b434c;
+$fcolor: #205b9f;
+$twcolor: #00ace3;
+$gcolor: #ff3921;
+$drcolor: #ff72a5;
+$becolor: #009bd5;
+
+
+@mixin font ($family, $size, $weight, $color: #fff){
+    font-family: $family;
+    font-size: $size+px;
+    font-weight: $weight;
+    color: $color;   
+}

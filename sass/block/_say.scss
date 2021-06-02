@@ -1,0 +1,183 @@
+.say {
+    padding: 100px 0 140px 0;
+    background: url('../img/bg_4.png') center ( center / cover) no-repeat;
+    @media (max-width: 1200px) {
+        padding: 40px 0 90px 0;
+    }
+    @media (max-width: 575px) {
+        padding: 10px 0 60px 0;
+    }
+    &__wrapper {
+        position: relative;
+        margin: 97px auto 0;
+        max-width: 830px;
+        @media (max-width: 575px) {
+            margin-top: 45px;
+        }
+    }
+    &__subtitle {
+        @include font ('Open Sans', 35, 600);
+        text-transform: uppercase;
+        text-align: center;
+        @media (max-width: 575px) {
+            font-size: 25px;
+        }
+    }
+    &_orange {
+        color: $mcolor;
+    }
+    &__text {
+        width: 462px;
+        height: 47px;
+        margin: 29px auto 0;
+        text-align: center;
+        @include font ('Open Sans', 16, 300);
+        line-height: 30px;
+        @media (max-width: 575px) {
+            margin-top: 20px;
+            width: 260px;
+            line-height: 19px;
+            font-size: 13px;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+    &__email, &__name, &__message {
+        padding: 18px 0 18px 19px;
+        width: 400px;
+        border-radius: 10px;
+        border: none;
+        @include font ('Open Sans', 16, 300, #3b434c);
+        @media (max-width: 1200px) {
+            width: 330px;
+        }
+        @media (max-width: 767px) {
+            width: 240px;
+        }
+        @media (max-width: 575px) {
+            padding: 8px 0 8px 14px;
+            font-size: 12px;
+            width: 230px;
+        }
+        &::placeholder {
+            @include font ('Open Sans', 16, 300, #3b434c);
+            transition: text-indent .5s;
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+            @media (max-width: 575px) {
+                font-size: 12px;
+            }
+        }
+        &:focus::placeholder {
+            opacity: 0;
+        }
+        &:active, &:focus {
+            outline: 0;
+        }
+        &:nth-child(1) {
+            margin-right: 29px;
+        }
+    }
+    &__name {
+        @media (max-width: 575px) {
+            margin-top: 20px;
+        }
+    }
+    &__message {
+        margin-top: 31px;
+        width: 829px;
+        height: 199px;
+        @media (max-width: 991px) {
+            height: 158px;
+            font-size: 14px;
+        }
+        @media (max-width: 575px) {
+            height: 110px;
+        }
+    }
+    &__btn {
+        margin-top: 30px;
+        width: 210px;
+        height: 50px;
+        vertical-align: middle;
+        border-radius: 10px;
+        border: none;
+        background-color: $mcolor;
+        @include font ('Open Sans', 16, 600);
+        text-transform: uppercase;
+        cursor: pointer;
+        &:active, &:focus {
+            outline: 0;
+        }
+        &:hover {
+            box-shadow: inset 0 0 15px 2px #9c4415;
+        }
+        &:active {
+            box-shadow: inset 0 0 15px 2px #9c4415;
+        }
+        @media (max-width: 991px) {
+            height: 40px;
+            font-size: 15px;
+        }
+        @media (max-width: 575px) {
+            height: 34px;
+            font-size: 12px;
+            margin-top: 20px;
+            width: 184px;
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        width: 295px;
+        justify-content: space-between;
+        @media (max-width: 991px) {
+            height: 40px;
+            width: 230px;
+            font-size: 15px;
+        }
+        @media (max-width: 575px) {
+            margin-top: 30px;
+            position: relative;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 43px;
+        height: 43px;
+        color: #fff;
+        background-color: $fcolor;
+        text-decoration: none;
+        font-size: 25px;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.2);
+        }
+        &-t {
+            background-color: $twcolor;
+        }
+        &-g {
+            background-color: $gcolor;
+        }
+        &-d {
+            background-color: $drcolor;
+        }
+        &-b {
+            background-color: $becolor;
+        }
+        @media (max-width: 991px) {
+            width: 37px;
+            height: 37px;
+            font-size: 20px;
+        }
+    }
+}

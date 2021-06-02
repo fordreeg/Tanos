@@ -1,0 +1,36 @@
+.footer {
+    padding: 46px 0 83px 0;
+    background-color: $tcolor;
+    @media (max-width: 991px) {
+        padding: 20px 0 50px 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        @include font ('Open Sans', 16, 300);
+        line-height: 40px;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+            font-size: 13px;
+        }
+        @media (max-width: 575px) {
+            line-height: 24px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            text-decoration: underline;
+        }
+        &-dot {
+            color: red;
+        }
+        &-domen {
+            font-weight: 300;
+        }
+    }
+}

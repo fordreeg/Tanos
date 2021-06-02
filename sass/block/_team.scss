@@ -1,0 +1,204 @@
+.team {
+    padding: 100px 0;
+    min-width: 100%;
+    @media (max-width: 567px) {
+        padding: 60px 0;
+    }
+    &__wrapper {
+        display: flex;
+        margin-top: 130px;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            justify-content: center;
+        }
+        @media (max-width: 990px) {
+            margin-top: 95px;
+            flex-flow: wrap;
+        }
+        @media (max-width: 575px) {
+            margin-top: 50px;
+        }
+    }
+    &__item {
+        text-align: center;
+        max-width: 255px;
+        max-height: 455px;
+        filter: grayscale(100%);
+        opacity: .8;
+        transition: filter .2s, opacity .2s;
+        &:hover {
+            filter: none;
+            opacity: 1;
+        }
+        &:hover .team__img {
+            transform: scale(1.09, 1.08);
+            &::after {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 1200px) {
+            margin-right: 20px;
+            &:nth-child(4) {
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 990px) {
+            max-width: 235px;
+        }
+        @media (max-width: 990px) {
+            margin-right: 40px;
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+            &:nth-child(3) {
+                margin-top: 40px;
+            }
+            &:nth-child(4) {
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 575px) {
+            margin-right: 0px;
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 235px;
+        height: 284px;
+        background: url('../img/catherina.png') center (center / cover) no-repeat;
+        transform-origin: bottom;
+        transition: transform .3s;
+        &::after {
+            opacity: 0;
+            transition: opacity .3s;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 235px;
+            height: 5px;
+            border-radius: 2.5px;
+            background-color: $mcolor;
+        }
+        &_harvey {
+            background: url('../img/harvey.png') center (center / cover) no-repeat;
+        }
+        &_janet {
+            background: url('../img/janet.png') center (center / cover) no-repeat;
+        }
+        &_kevin {
+            background: url('../img/kevin.png') center (center / cover) no-repeat;
+        }
+        @media ( max-width: 1200px) {
+            width: 210px;
+            height: 253px;
+            &::after {
+                width: 210px;
+            }
+        }
+        @media (max-width: 576px) {
+            width: 150px;
+            height: 183px;
+            &::after {
+                width: 150px;
+            }
+        }
+    }
+    &__name {
+        margin-top: 30px;
+        @include font ('Open Sans', 25, 600, $tcolor);
+        line-height: 10px;
+        text-transform: uppercase;
+        @media ( max-width: 1200px) {
+            font-size: 21px;
+        }
+        @media (max-width: 576px) {
+            font-size: 15px;
+        }
+    }
+    &__social {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 576px) {
+            margin-top: 15px;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 14px;
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+        background-color: red;
+        text-decoration: none;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.2);
+        }
+        &:nth-child(1) { 
+            background-color: $fcolor;
+        }
+        &:nth-child(2) {
+            background-color: $twcolor;
+        }
+        &:nth-child(3) {
+            margin-right: 0;
+            background-color: $gcolor;
+        }
+        .icon-facebook, .icon-twitter, .icon-google-plus-logo {
+            color: #fff;
+        }
+    }
+    &__descr {
+        margin-top: 32px;
+        @include font ('Open Sans', 14, 300, $tcolor);
+        line-height: 26px;
+        @media (max-width: 576px) {
+            margin-top: 15px;
+            line-height: 22px;
+        }
+    }
+    &__text {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.subtitle {
+    margin: 0;
+    text-align: center;
+    @include font ('Open Sans', 35, 600, $tcolor);
+    line-height: 40px;
+    text-transform: uppercase;
+    &_orange {
+        color: $mcolor;
+    }
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+    @media (max-width: 567px) {
+        font-size: 25px;
+    }
+}
+.text {
+    margin: 29px auto 0;
+    @include font ('Open Sans', 16, 400, $tcolor);
+    line-height: 25px;
+    max-width: 470px;
+    max-height: 47px;
+    @media (max-width: 567px) {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 250px;
+        max-height: 99px;
+    }
+}
